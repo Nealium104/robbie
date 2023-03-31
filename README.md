@@ -1,3 +1,6 @@
+# 👋Hi Robbie
+This is a file that shows what this project is and it has some extra stuff at the bottom if you become interested in running this instance locally. If you want to see what the last commit looks like live, you can find it here: https://robbie-portfolio.vercel.app/
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
