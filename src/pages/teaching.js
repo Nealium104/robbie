@@ -4,7 +4,7 @@ export default function teaching () {
     <>
         <Nav />
         <div>
-            This is a teaching page
+            <h1>This is the teaching page</h1>
         </div>
     </>
 }

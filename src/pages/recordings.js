@@ -2,9 +2,9 @@ import Nav from "@/components/Nav"
 
 export default function Recordings () {
     <>
-    <Nav />
-    <div>
-        This is a recordings page
-    </div>
+        <Nav />
+        <div>
+            <h1>This is the recordings page</h1>
+        </div>
     </>
 }
