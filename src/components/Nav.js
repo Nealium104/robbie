@@ -28,54 +28,51 @@ export default function Nav() {
     };
   }, []);
 
-    return (
-        <nav>
-            {/* Primary Div */}
-            <div className='xl:max-w-6xl mx-auto px-6'>
-                <div className='flex justify-between'>
-                    <div className='flex items-center space-x-4'>
-                        <div className='py-2 px-3'>
-                            <Link href='/'>
-                            <GiTrumpet className='text-6xl mx-auto font-bold' />
-                            Robbie Collins
-                            </Link>
-                        </div>
-
-                        <div className='hidden md:flex items-center space-x-1'>
-                            <Link href="/" className='py-2 px-3'>Home</Link>
-                            <Link href="/bio/" className='py-2 px-3'>Bio</Link>
-                        </div>        
-                    </div>
-
-
-            {/* Secondary Div */}
-            <div>
-                <Link href="/recordings/" className='hidden md:flex items-center space-x-1'>Recordings</Link>
-                <Link href="/teaching/" className='py-2 px-3'>Teaching</Link>
-                <button>
-                    <IoSunny />
-                </button>
-                <Link href="/contact/" className='py-2 px-3 bg-blue-300 rounded hover:bg-blue-400'>Contact</Link>
+      return (
+        <nav className='font-thin'>
+            {/* // Nav */}
+            <div className='max-w-7xl mx-auto'>
+              <div className='flex justify-between'>
+                <div className='flex space-x-4'>
+                  <div className='mr-2 py-2 px-4'>
+                    <Link href='/'>
+                    <GiTrumpet className='text-6xl mx-auto' />
+                    <span className='font-bold'>Robbie Collins</span>
+                    </Link>
+                  </div>
+            {/* // Primary */}
+                  <div className='hidden md:flex items-center space-x-3'>
+                    <Link href='/' className=' py-2 px-4'>Home</Link>
+                    <Link href='/bio/' className=' py-2 px-4'>Bio</Link>
+                    <Link href="/recordings/" className='py-2 px-4'>Recordings</Link>
+                  </div>
+                </div>
+            {/* // Secondary */}
+                <div className='hidden md:flex items-center space-x-3'>
+                  
+                  <Link href="/teaching/" className=''>Teaching</Link>
+                  <Link href="/contact/" className='py-2 px-3 bg-gray-400 text-gray-900 rounded'>Contact</Link>
+                </div>
+                {/* mobile button */}
+                  <div className='md:hidden flex items-center mobile-menu-button'>
+                    <button ref={btnRef}>
+                      <IoReorderThreeSharp className='text-3xl'/>
+                    </button>
+                  </div>
+                  </div>
             </div>
-
-            {/* Mobile Menu Collapse Button */}
-            <div className='md:hidden flex items-center'>
-                <button className='mobile-menu-button' ref={btnRef}>
-                    <IoReorderThreeSharp />
-                </button>
+             {/* // Mobile Menu */}
+             <div className='hidden mobile-menu md:hidden' ref={menuRef}>
+            <div className='flex flex-col justify-center items-center'>
+              <Link href="/" className='block py-4 px-4 text-sm'>Home</Link>
+              <Link href="/bio/" className='block py-4 px-4 text-sm'>Bio</Link>    
+              <Link href="/recordings/" className='block py-4 px-4 text-sm'>Recordings</Link>
+              <Link href="/teaching/" className='block py-4 px-4 text-sm'>Teaching</Link>
+              <Link href="/contact/" className='block py-4 px-4 text-sm'>Contact</Link>
             </div>
-        </div>
-        {/* Mobile Menu */}
-        <div className='flex flex-col items-center mobile-menu hidden md:hidden' ref={menuRef}>
-        <Link href="/">Home</Link>
-        <Link href="/bio/">Bio</Link>    
-        <Link href="/recordings/">Recordings</Link>
-        <Link href="/teaching/">Teaching</Link>
-        <Link href="/contact/">Contact</Link>
-
-        </div>
-        </div>
+          </div>
         </nav>
-    )
-    
+
+        
+      )
 }
